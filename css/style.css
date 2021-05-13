@@ -15,7 +15,8 @@ section {
   --card-text-color: #777;
   --sns-icon-color: #e9f5ff;
   --toggle-background-color: #e9f5ff;
-  --tootle-icon-color: #2fa1ff;
+  --toogle-icon-color: #2fa1ff;
+  --toogle-icon-img: '\f185';
 
   position: relative;
   background: var(--section-color);
@@ -25,6 +26,16 @@ section {
   align-items: center;
   transition: background 0.5s;
 }
+section.dark {
+  --section-color: #24292d;
+  --card-color: #323840;
+  --card-text-color: #ccc;
+  --sns-icon-color: #404852;
+  --toggle-background-color: #fff;
+  --toogle-icon-color: #404852;
+  --toogle-icon-img: '\f186';
+}
+
 section .card {
   position: relative;
   width: 300px;
@@ -137,22 +148,14 @@ section .card .sci li a .fa {
   cursor: pointer;
 }
 .toggle::before {
-  content: '\f186';
+  content: var(--toogle-icon-img);
   font-family: fontAwesome;
-  color: var(--tootle-icon-color);
+  color: var(--toogle-icon-color);
 }
 
 
 /* DARK MODE */
-section.dark .toggle::before{
-  content: '\f185';
-}
-section.dark {
-  --section-color: #24292d;
-  --card-color: #323840;
-  --card-text-color: #ccc;
-  --sns-icon-color: #404852;
-  --toggle-background-color: #fff;
-  --tootle-icon-color: #404852;
+/* section.dark .toggle::before{
+  content: '\f186';
+} */
 
-}
