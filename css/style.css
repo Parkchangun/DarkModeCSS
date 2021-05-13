@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +9,16 @@
 }
 
 section {
+  /* Light Mode Color */
+  --section-color: #f0f8ff;
+  --card-color: #fff;
+  --card-text-color: #777;
+  --sns-icon-color: #e9f5ff;
+  --toggle-background-color: #e9f5ff;
+  --tootle-icon-color: #2fa1ff;
+
   position: relative;
-  background: #f0f8ff;
+  background: var(--section-color);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -20,7 +29,7 @@ section .card {
   position: relative;
   width: 300px;
   height: 380px;
-  background: #fff;
+  background: var(--card-color);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.025);
   border-radius: 5%;
   display: flex;
@@ -65,7 +74,7 @@ section .card .img-text h3 {
 
 section .card .img-text h3 span {
   font-weight: 400;
-  color: #777;
+  color: var(--card-text-color);
   font-size: 0.75em;
 }
 
@@ -82,7 +91,7 @@ section .card .sci li a {
   position: relative;
   width: 50px;
   height: 50px;
-  background: #e9f5ff;
+  background: var(--sns-icon-color);
   color: #2fa1ff;
   margin: 0 5px;
   display: flex;
@@ -130,32 +139,20 @@ section .card .sci li a .fa {
 .toggle::before {
   content: '\f186';
   font-family: fontAwesome;
-  color: #2fa1ff;
+  color: var(--tootle-icon-color);
 }
 
 
 /* DARK MODE */
 section.dark .toggle::before{
   content: '\f185';
-  color: #fff;
 }
-
 section.dark {
-  background: #24292d;
-}
+  --section-color: #24292d;
+  --card-color: #323840;
+  --card-text-color: #ccc;
+  --sns-icon-color: #404852;
+  --toggle-background-color: #fff;
+  --tootle-icon-color: #404852;
 
-section.dark .card {
-  background: #323840;
-}
-
-section.dark .card .img-text h3 span {
-  color: #ccc;
-}
-
-section.dark .card .sci li a {
-  background: #404852;
-}
-
-section.dark .toggle {
-  background: #404852;
 }
